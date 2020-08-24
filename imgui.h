@@ -263,12 +263,12 @@ struct ImVec4
     IM_VEC4_CLASS_EXTRA     // Define additional constructors and implicit cast operators in imconfig.h to convert back and forth between your math types and ImVec4.
 #endif
 };
-IM_MSVC_RUNTIME_CHECKS_RESTORE
 
 #define IM_IMSTR_LENGTH(s)          (s.Begin ? (s.End ? (size_t)(s.End - s.Begin) : strlen(s.Begin)) : 0)
 #define IM_IMSTR_ENSURE_HAS_END(s)  if (s.End == NULL) s.End = s.Begin + strlen(s.Begin)
 
 // String view class.
+#define IMGUI_HAS_IMSTR 1
 struct ImStrv
 {
     const char* Begin;
@@ -302,6 +302,8 @@ struct ImStrv
     IM_IMSTR_CLASS_EXTRA     // Define additional constructors and implicit cast operators in imconfig.h to convert back and forth between your math types and ImStrv.
 #endif
 };
+
+IM_MSVC_RUNTIME_CHECKS_RESTORE
 
 //-----------------------------------------------------------------------------
 // [SECTION] Dear ImGui end-user API functions
