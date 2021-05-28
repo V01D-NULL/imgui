@@ -37,7 +37,7 @@
 
 #include <stdint.h>     // uint64_t
 #include <cstring>      // memcpy
-#include "imgui.h"
+#include "../imgui.h"
 #include "imgui_impl_allegro5.h"
 
 // Allegro
